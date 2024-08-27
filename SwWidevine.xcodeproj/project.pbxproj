@@ -1,0 +1,801 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B05CA9B2C77E0570082F2E0 /* WDVCryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05CA9A2C77E0570082F2E0 /* WDVCryptoUtil.swift */; };
+		8B150F722C7C9C41001FED2B /* SwiftRSA in Frameworks */ = {isa = PBXBuildFile; productRef = 8B150F712C7C9C41001FED2B /* SwiftRSA */; };
+		8B150F732C7C9D87001FED2B /* SwWidevine.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B1CE0022C6E9D8E00D10D3F /* SwWidevine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B1C68342C67D69C00F241ED /* SwPSSH in Frameworks */ = {isa = PBXBuildFile; productRef = 8B1C68332C67D69C00F241ED /* SwPSSH */; };
+		8B1C68362C67D81C00F241ED /* UnitWDVCDMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C68352C67D81C00F241ED /* UnitWDVCDMController.swift */; };
+		8B1C683C2C67DCF000F241ED /* UnitWDVDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C683B2C67DCF000F241ED /* UnitWDVDevice.swift */; };
+		8B1CDFFB2C6E89ED00D10D3F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 8B1CDFFA2C6E89ED00D10D3F /* PrivacyInfo.xcprivacy */; };
+		8B1CDFFD2C6E914A00D10D3F /* WDVSessionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1CDFFC2C6E914A00D10D3F /* WDVSessionUtil.swift */; };
+		8B1F2EA42C4991C10002720C /* WDVBinaryIntegerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F2EA32C4991C10002720C /* WDVBinaryIntegerExt.swift */; };
+		8B372A872C6B907B00C58133 /* appCrt.protobuf in Resources */ = {isa = PBXBuildFile; fileRef = 8B372A862C6B907B00C58133 /* appCrt.protobuf */; };
+		8B3B1B492C6610240019070D /* TestConstantsXCodeEnvExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B1B482C6610200019070D /* TestConstantsXCodeEnvExt.swift */; };
+		8B3B1B4C2C66104C0019070D /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B1B4A2C66102D0019070D /* TestConstants.swift */; };
+		8B3B1B4F2C6610B40019070D /* UnitWDVBase16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B1B4E2C6610B40019070D /* UnitWDVBase16.swift */; };
+		8B3B1B522C66110D0019070D /* UnitWDVBitConvertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B1B512C66110D0019070D /* UnitWDVBitConvertUtil.swift */; };
+		8B489EE52C0F64F2009BEEF4 /* SwWidevine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B489EDC2C0F64F2009BEEF4 /* SwWidevine.framework */; };
+		8B489EFE2C0F66FA009BEEF4 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 8B489EFD2C0F66FA009BEEF4 /* SwiftProtobuf */; };
+		8B489F0F2C0F6AA1009BEEF4 /* WDVSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B489F0E2C0F6AA1009BEEF4 /* WDVSession.swift */; };
+		8B489F112C0F6BDB009BEEF4 /* WDVKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B489F102C0F6BDB009BEEF4 /* WDVKey.swift */; };
+		8B541F512C6A5168005019B8 /* licRequest.protobuf in Resources */ = {isa = PBXBuildFile; fileRef = 8B541F502C6A5168005019B8 /* licRequest.protobuf */; };
+		8B541F532C6A516E005019B8 /* licResponse.protobuf in Resources */ = {isa = PBXBuildFile; fileRef = 8B541F522C6A516E005019B8 /* licResponse.protobuf */; };
+		8B738E8E2C4130790076AF75 /* WDVDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B738E8D2C4130790076AF75 /* WDVDevice.swift */; };
+		8B738E902C4131240076AF75 /* WDVDevicePlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B738E8F2C4131240076AF75 /* WDVDevicePlatform.swift */; };
+		8B738E972C4135AB0076AF75 /* WDVBinaryUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B738E962C4135AB0076AF75 /* WDVBinaryUtil.swift */; };
+		8B738EC12C4167D50076AF75 /* WDVCDMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B738EC02C4167D50076AF75 /* WDVCDMController.swift */; };
+		8B738EC32C4169660076AF75 /* WDVSecurityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B738EC22C4169660076AF75 /* WDVSecurityLevel.swift */; };
+		8B738EC72C418F380076AF75 /* WDVBase16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B738EC62C418F380076AF75 /* WDVBase16.swift */; };
+		8BE482FD2C6FDB29006C7C5C /* licReqSelfGenerated.protobuf in Resources */ = {isa = PBXBuildFile; fileRef = 8BE482FC2C6FDB28006C7C5C /* licReqSelfGenerated.protobuf */; };
+		8BE482FF2C6FDB34006C7C5C /* licRespBySelfGenerated.protobuf in Resources */ = {isa = PBXBuildFile; fileRef = 8BE482FE2C6FDB34006C7C5C /* licRespBySelfGenerated.protobuf */; };
+		8BE601032C3C3C52007ADCE8 /* License.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE601022C3C3C52007ADCE8 /* License.pb.swift */; };
+		8BE601062C3C3FAC007ADCE8 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE601052C3C3FAC007ADCE8 /* CryptoSwift */; };
+		8BE601082C3C4145007ADCE8 /* WDVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE601072C3C4145007ADCE8 /* WDVError.swift */; };
+		8BFE63A82C7862B400DF770C /* WDVCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE63A72C7862B400DF770C /* WDVCMAC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B489EE62C0F64F2009BEEF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B489ED32C0F64F2009BEEF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B489EDB2C0F64F2009BEEF4;
+			remoteInfo = SwWidevine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8B05CA992C77C7400082F2E0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B05CA9A2C77E0570082F2E0 /* WDVCryptoUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDVCryptoUtil.swift; sourceTree = "<group>"; };
+		8B1C68352C67D81C00F241ED /* UnitWDVCDMController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitWDVCDMController.swift; sourceTree = "<group>"; };
+		8B1C683B2C67DCF000F241ED /* UnitWDVDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitWDVDevice.swift; sourceTree = "<group>"; };
+		8B1CDFFA2C6E89ED00D10D3F /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		8B1CDFFC2C6E914A00D10D3F /* WDVSessionUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDVSessionUtil.swift; sourceTree = "<group>"; };
+		8B1CDFFE2C6E9A2600D10D3F /* SwWidevine.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwWidevine.podspec; sourceTree = "<group>"; };
+		8B1CDFFF2C6E9A2600D10D3F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		8B1CE0002C6E9A2600D10D3F /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		8B1CE0022C6E9D8E00D10D3F /* SwWidevine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwWidevine.h; sourceTree = "<group>"; };
+		8B1F2EA32C4991C10002720C /* WDVBinaryIntegerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDVBinaryIntegerExt.swift; sourceTree = "<group>"; };
+		8B372A862C6B907B00C58133 /* appCrt.protobuf */ = {isa = PBXFileReference; lastKnownFileType = file; path = appCrt.protobuf; sourceTree = "<group>"; };
+		8B3B1B472C6610200019070D /* TestConstantsSpmEnvExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstantsSpmEnvExt.swift; sourceTree = "<group>"; };
+		8B3B1B482C6610200019070D /* TestConstantsXCodeEnvExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstantsXCodeEnvExt.swift; sourceTree = "<group>"; };
+		8B3B1B4A2C66102D0019070D /* TestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
+		8B3B1B4E2C6610B40019070D /* UnitWDVBase16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitWDVBase16.swift; sourceTree = "<group>"; };
+		8B3B1B512C66110D0019070D /* UnitWDVBitConvertUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitWDVBitConvertUtil.swift; sourceTree = "<group>"; };
+		8B489EDC2C0F64F2009BEEF4 /* SwWidevine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwWidevine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B489EE42C0F64F2009BEEF4 /* Wdv-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wdv-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B489EF62C0F6527009BEEF4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8B489EF72C0F654B009BEEF4 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		8B489EFF2C0F6711009BEEF4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B489F002C0F673A009BEEF4 /* License.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = License.proto; sourceTree = "<group>"; };
+		8B489F0E2C0F6AA1009BEEF4 /* WDVSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDVSession.swift; sourceTree = "<group>"; };
+		8B489F102C0F6BDB009BEEF4 /* WDVKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDVKey.swift; sourceTree = "<group>"; };
+		8B541F502C6A5168005019B8 /* licRequest.protobuf */ = {isa = PBXFileReference; lastKnownFileType = file; path = licRequest.protobuf; sourceTree = "<group>"; };
+		8B541F522C6A516E005019B8 /* licResponse.protobuf */ = {isa = PBXFileReference; lastKnownFileType = file; path = licResponse.protobuf; sourceTree = "<group>"; };
+		8B738E8D2C4130790076AF75 /* WDVDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDVDevice.swift; sourceTree = "<group>"; };
+		8B738E8F2C4131240076AF75 /* WDVDevicePlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDVDevicePlatform.swift; sourceTree = "<group>"; };
+		8B738E962C4135AB0076AF75 /* WDVBinaryUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDVBinaryUtil.swift; sourceTree = "<group>"; };
+		8B738EC02C4167D50076AF75 /* WDVCDMController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDVCDMController.swift; sourceTree = "<group>"; };
+		8B738EC22C4169660076AF75 /* WDVSecurityLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDVSecurityLevel.swift; sourceTree = "<group>"; };
+		8B738EC62C418F380076AF75 /* WDVBase16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDVBase16.swift; sourceTree = "<group>"; };
+		8BE482FC2C6FDB28006C7C5C /* licReqSelfGenerated.protobuf */ = {isa = PBXFileReference; lastKnownFileType = file; path = licReqSelfGenerated.protobuf; sourceTree = "<group>"; };
+		8BE482FE2C6FDB34006C7C5C /* licRespBySelfGenerated.protobuf */ = {isa = PBXFileReference; lastKnownFileType = file; path = licRespBySelfGenerated.protobuf; sourceTree = "<group>"; };
+		8BE601022C3C3C52007ADCE8 /* License.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.pb.swift; sourceTree = "<group>"; };
+		8BE601072C3C4145007ADCE8 /* WDVError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDVError.swift; sourceTree = "<group>"; };
+		8BFDAB9E2C75DF8600217E80 /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		8BFE63A72C7862B400DF770C /* WDVCMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDVCMAC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B489ED92C0F64F2009BEEF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B489EFE2C0F66FA009BEEF4 /* SwiftProtobuf in Frameworks */,
+				8BE601062C3C3FAC007ADCE8 /* CryptoSwift in Frameworks */,
+				8B1C68342C67D69C00F241ED /* SwPSSH in Frameworks */,
+				8B150F722C7C9C41001FED2B /* SwiftRSA in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B489EE12C0F64F2009BEEF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B489EE52C0F64F2009BEEF4 /* SwWidevine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B1C68312C67D52700F241ED /* Exclude */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Exclude;
+			sourceTree = "<group>";
+		};
+		8B3B1B462C6610000019070D /* SwWidevineTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B3B1B4D2C6610A40019070D /* Model */,
+				8B3B1B502C6610E80019070D /* Util */,
+				8B1C68352C67D81C00F241ED /* UnitWDVCDMController.swift */,
+				8B3B1B4A2C66102D0019070D /* TestConstants.swift */,
+				8B3B1B472C6610200019070D /* TestConstantsSpmEnvExt.swift */,
+				8B3B1B482C6610200019070D /* TestConstantsXCodeEnvExt.swift */,
+				8B372A862C6B907B00C58133 /* appCrt.protobuf */,
+				8B541F502C6A5168005019B8 /* licRequest.protobuf */,
+				8B541F522C6A516E005019B8 /* licResponse.protobuf */,
+				8BE482FC2C6FDB28006C7C5C /* licReqSelfGenerated.protobuf */,
+				8BE482FE2C6FDB34006C7C5C /* licRespBySelfGenerated.protobuf */,
+			);
+			path = SwWidevineTests;
+			sourceTree = "<group>";
+		};
+		8B3B1B4D2C6610A40019070D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B3B1B4E2C6610B40019070D /* UnitWDVBase16.swift */,
+				8B1C683B2C67DCF000F241ED /* UnitWDVDevice.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B3B1B502C6610E80019070D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8B3B1B512C66110D0019070D /* UnitWDVBitConvertUtil.swift */,
+				8B1CDFFC2C6E914A00D10D3F /* WDVSessionUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		8B489ED22C0F64F2009BEEF4 = {
+			isa = PBXGroup;
+			children = (
+				8B489EF62C0F6527009BEEF4 /* .gitignore */,
+				8B489EF92C0F65A3009BEEF4 /* Proto */,
+				8B489EDE2C0F64F2009BEEF4 /* Sources */,
+				8B489EE82C0F64F2009BEEF4 /* Tests */,
+				8B489EF72C0F654B009BEEF4 /* LICENSE */,
+				8B1CE0002C6E9A2600D10D3F /* CHANGELOG.md */,
+				8BFDAB9E2C75DF8600217E80 /* TODO.md */,
+				8B05CA992C77C7400082F2E0 /* README.md */,
+				8B1CDFFF2C6E9A2600D10D3F /* Package.swift */,
+				8B1CDFFE2C6E9A2600D10D3F /* SwWidevine.podspec */,
+				8B489EDD2C0F64F2009BEEF4 /* Products */,
+				8BFDABF42C760DC700217E80 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8B489EDD2C0F64F2009BEEF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B489EDC2C0F64F2009BEEF4 /* SwWidevine.framework */,
+				8B489EE42C0F64F2009BEEF4 /* Wdv-Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B489EDE2C0F64F2009BEEF4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8B1C68312C67D52700F241ED /* Exclude */,
+				8B489EF82C0F6589009BEEF4 /* SwWidevine */,
+				8B1CE0022C6E9D8E00D10D3F /* SwWidevine.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8B489EE82C0F64F2009BEEF4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8B3B1B462C6610000019070D /* SwWidevineTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		8B489EF82C0F6589009BEEF4 /* SwWidevine */ = {
+			isa = PBXGroup;
+			children = (
+				8B489F012C0F674E009BEEF4 /* Generated */,
+				8B489F0D2C0F6A97009BEEF4 /* Model */,
+				8B489F122C0F6DA5009BEEF4 /* Util */,
+				8B1CDFFA2C6E89ED00D10D3F /* PrivacyInfo.xcprivacy */,
+				8B738EC02C4167D50076AF75 /* WDVCDMController.swift */,
+			);
+			path = SwWidevine;
+			sourceTree = "<group>";
+		};
+		8B489EF92C0F65A3009BEEF4 /* Proto */ = {
+			isa = PBXGroup;
+			children = (
+				8B489F002C0F673A009BEEF4 /* License.proto */,
+				8B489EFF2C0F6711009BEEF4 /* README.md */,
+			);
+			path = Proto;
+			sourceTree = "<group>";
+		};
+		8B489F012C0F674E009BEEF4 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				8B489F022C0F6777009BEEF4 /* Proto */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		8B489F022C0F6777009BEEF4 /* Proto */ = {
+			isa = PBXGroup;
+			children = (
+				8BE601022C3C3C52007ADCE8 /* License.pb.swift */,
+			);
+			path = Proto;
+			sourceTree = "<group>";
+		};
+		8B489F0D2C0F6A97009BEEF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B738E9A2C413BE10076AF75 /* Device */,
+				8B738EC62C418F380076AF75 /* WDVBase16.swift */,
+				8B1F2EA32C4991C10002720C /* WDVBinaryIntegerExt.swift */,
+				8BE601072C3C4145007ADCE8 /* WDVError.swift */,
+				8B489F102C0F6BDB009BEEF4 /* WDVKey.swift */,
+				8B489F0E2C0F6AA1009BEEF4 /* WDVSession.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B489F122C0F6DA5009BEEF4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8B738E962C4135AB0076AF75 /* WDVBinaryUtil.swift */,
+				8BFE63A72C7862B400DF770C /* WDVCMAC.swift */,
+				8B05CA9A2C77E0570082F2E0 /* WDVCryptoUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		8B738E9A2C413BE10076AF75 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				8B738E8D2C4130790076AF75 /* WDVDevice.swift */,
+				8B738E8F2C4131240076AF75 /* WDVDevicePlatform.swift */,
+				8B738EC22C4169660076AF75 /* WDVSecurityLevel.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		8BFDABF42C760DC700217E80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8B489ED72C0F64F2009BEEF4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B150F732C7C9D87001FED2B /* SwWidevine.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8B489EDB2C0F64F2009BEEF4 /* SwWidevine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B489EEE2C0F64F2009BEEF4 /* Build configuration list for PBXNativeTarget "SwWidevine" */;
+			buildPhases = (
+				8B489ED72C0F64F2009BEEF4 /* Headers */,
+				8B489ED82C0F64F2009BEEF4 /* Sources */,
+				8B489ED92C0F64F2009BEEF4 /* Frameworks */,
+				8B489EDA2C0F64F2009BEEF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwWidevine;
+			packageProductDependencies = (
+				8B489EFD2C0F66FA009BEEF4 /* SwiftProtobuf */,
+				8BE601052C3C3FAC007ADCE8 /* CryptoSwift */,
+				8B1C68332C67D69C00F241ED /* SwPSSH */,
+				8B150F712C7C9C41001FED2B /* SwiftRSA */,
+			);
+			productName = SwWidevine;
+			productReference = 8B489EDC2C0F64F2009BEEF4 /* SwWidevine.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8B489EE32C0F64F2009BEEF4 /* Wdv-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B489EF12C0F64F2009BEEF4 /* Build configuration list for PBXNativeTarget "Wdv-Tests" */;
+			buildPhases = (
+				8B489EE02C0F64F2009BEEF4 /* Sources */,
+				8B489EE12C0F64F2009BEEF4 /* Frameworks */,
+				8B489EE22C0F64F2009BEEF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B489EE72C0F64F2009BEEF4 /* PBXTargetDependency */,
+			);
+			name = "Wdv-Tests";
+			productName = SwWidevineTests;
+			productReference = 8B489EE42C0F64F2009BEEF4 /* Wdv-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B489ED32C0F64F2009BEEF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					8B489EDB2C0F64F2009BEEF4 = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
+					};
+					8B489EE32C0F64F2009BEEF4 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 8B489ED62C0F64F2009BEEF4 /* Build configuration list for PBXProject "SwWidevine" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B489ED22C0F64F2009BEEF4;
+			packageReferences = (
+				8B489EFC2C0F66FA009BEEF4 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+				8BE601042C3C3FAC007ADCE8 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				8B1C68322C67D69C00F241ED /* XCRemoteSwiftPackageReference "SwPSSH" */,
+				8B150F702C7C9C41001FED2B /* XCRemoteSwiftPackageReference "SwiftRSA" */,
+			);
+			productRefGroup = 8B489EDD2C0F64F2009BEEF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B489EDB2C0F64F2009BEEF4 /* SwWidevine */,
+				8B489EE32C0F64F2009BEEF4 /* Wdv-Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B489EDA2C0F64F2009BEEF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B1CDFFB2C6E89ED00D10D3F /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B489EE22C0F64F2009BEEF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BE482FD2C6FDB29006C7C5C /* licReqSelfGenerated.protobuf in Resources */,
+				8B372A872C6B907B00C58133 /* appCrt.protobuf in Resources */,
+				8B541F532C6A516E005019B8 /* licResponse.protobuf in Resources */,
+				8B541F512C6A5168005019B8 /* licRequest.protobuf in Resources */,
+				8BE482FF2C6FDB34006C7C5C /* licRespBySelfGenerated.protobuf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B489ED82C0F64F2009BEEF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B738EC32C4169660076AF75 /* WDVSecurityLevel.swift in Sources */,
+				8B738E8E2C4130790076AF75 /* WDVDevice.swift in Sources */,
+				8B738E972C4135AB0076AF75 /* WDVBinaryUtil.swift in Sources */,
+				8BE601082C3C4145007ADCE8 /* WDVError.swift in Sources */,
+				8B489F0F2C0F6AA1009BEEF4 /* WDVSession.swift in Sources */,
+				8B738EC72C418F380076AF75 /* WDVBase16.swift in Sources */,
+				8B489F112C0F6BDB009BEEF4 /* WDVKey.swift in Sources */,
+				8B738EC12C4167D50076AF75 /* WDVCDMController.swift in Sources */,
+				8BE601032C3C3C52007ADCE8 /* License.pb.swift in Sources */,
+				8BFE63A82C7862B400DF770C /* WDVCMAC.swift in Sources */,
+				8B738E902C4131240076AF75 /* WDVDevicePlatform.swift in Sources */,
+				8B05CA9B2C77E0570082F2E0 /* WDVCryptoUtil.swift in Sources */,
+				8B1F2EA42C4991C10002720C /* WDVBinaryIntegerExt.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B489EE02C0F64F2009BEEF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B3B1B492C6610240019070D /* TestConstantsXCodeEnvExt.swift in Sources */,
+				8B1CDFFD2C6E914A00D10D3F /* WDVSessionUtil.swift in Sources */,
+				8B3B1B522C66110D0019070D /* UnitWDVBitConvertUtil.swift in Sources */,
+				8B3B1B4C2C66104C0019070D /* TestConstants.swift in Sources */,
+				8B1C683C2C67DCF000F241ED /* UnitWDVDevice.swift in Sources */,
+				8B1C68362C67D81C00F241ED /* UnitWDVCDMController.swift in Sources */,
+				8B3B1B4F2C6610B40019070D /* UnitWDVBase16.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B489EE72C0F64F2009BEEF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B489EDB2C0F64F2009BEEF4 /* SwWidevine */;
+			targetProxy = 8B489EE62C0F64F2009BEEF4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8B489EEC2C0F64F2009BEEF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = "";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B489EED2C0F64F2009BEEF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = "";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8B489EEF2C0F64F2009BEEF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0.3;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.wdv;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Debug;
+		};
+		8B489EF02C0F64F2009BEEF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0.3;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.wdv;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Release;
+		};
+		8B489EF22C0F64F2009BEEF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = "";
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.wdvn.SwWidevineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = "";
+				WATCHOS_DEPLOYMENT_TARGET = "";
+				XROS_DEPLOYMENT_TARGET = "";
+			};
+			name = Debug;
+		};
+		8B489EF32C0F64F2009BEEF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = "";
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.wdvn.SwWidevineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = "";
+				WATCHOS_DEPLOYMENT_TARGET = "";
+				XROS_DEPLOYMENT_TARGET = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B489ED62C0F64F2009BEEF4 /* Build configuration list for PBXProject "SwWidevine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B489EEC2C0F64F2009BEEF4 /* Debug */,
+				8B489EED2C0F64F2009BEEF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B489EEE2C0F64F2009BEEF4 /* Build configuration list for PBXNativeTarget "SwWidevine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B489EEF2C0F64F2009BEEF4 /* Debug */,
+				8B489EF02C0F64F2009BEEF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B489EF12C0F64F2009BEEF4 /* Build configuration list for PBXNativeTarget "Wdv-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B489EF22C0F64F2009BEEF4 /* Debug */,
+				8B489EF32C0F64F2009BEEF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B150F702C7C9C41001FED2B /* XCRemoteSwiftPackageReference "SwiftRSA" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mIwr/SwiftRSA";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+		8B1C68322C67D69C00F241ED /* XCRemoteSwiftPackageReference "SwPSSH" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mIwr/SwPSSH";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+		8B489EFC2C0F66FA009BEEF4 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.27.1;
+			};
+		};
+		8BE601042C3C3FAC007ADCE8 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B150F712C7C9C41001FED2B /* SwiftRSA */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B150F702C7C9C41001FED2B /* XCRemoteSwiftPackageReference "SwiftRSA" */;
+			productName = SwiftRSA;
+		};
+		8B1C68332C67D69C00F241ED /* SwPSSH */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B1C68322C67D69C00F241ED /* XCRemoteSwiftPackageReference "SwPSSH" */;
+			productName = SwPSSH;
+		};
+		8B489EFD2C0F66FA009BEEF4 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B489EFC2C0F66FA009BEEF4 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		8BE601052C3C3FAC007ADCE8 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BE601042C3C3FAC007ADCE8 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8B489ED32C0F64F2009BEEF4 /* Project object */;
+}
