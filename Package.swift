@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/apple/swift-protobuf.git", from: "1.27.1"),
         .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.8.3"),
-        .package(url: "https://github.com/mIwr/SwPSSH.git", from: "1.1.0"),
+        .package(url: "https://github.com/mIwr/SwPSSH.git", from: "1.2.0"),
         .package(url: "https://github.com/mIwr/SwiftRSA.git", from: "2.4.1"),
     ],
     targets: [
@@ -27,6 +27,7 @@ let package = Package(
         ], resources: [.copy("PrivacyInfo.xcprivacy")]),
         .testTarget(name: "SwWidevineTests", dependencies: ["SwWidevine"], exclude: ["TestConstantsXCodeEnvExt.swift"], resources: [
             .process("appCrt.protobuf"),
+            .process("deviceClID.protobuf"),
             .process("licRequest.protobuf"),
             .process("licResponse.protobuf"),
             .process("licReqSelfGenerated.protobuf"),

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "SwWidevine"
-  spec.version      = "1.0.3"
+  spec.version      = "1.1.0"
   spec.summary      = "Swift Widevine CDM implementation"
   spec.homepage     = "https://github.com/mIwr/SwWidevine"
   spec.license      = { :type => "MIT", :file => "LICENSE" }

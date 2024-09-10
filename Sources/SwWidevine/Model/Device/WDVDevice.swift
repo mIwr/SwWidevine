@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftRSA
 
 ///Widevine device info
 public class WDVDevice {
@@ -21,12 +22,28 @@ public class WDVDevice {
     public let securityLvl: WDVSecurityLevel
     ///Extra bit-flags
     public let flags: UInt8
-    ///Device private key
+    ///Device private key (DER)
     public let key: [UInt8]
     ///Device client ID
     public let clID: WDVClientIdentification
     ///File Hashes for Verified Media Path (VMP) support
     public let vmp: WDVFileHashes
+    
+    ///Device private key (PEM)
+    public var pemKey: String {
+        get {
+            var res = ""
+            do {
+                let rsaKey = try RSAPrivateKey(der: key, format: .X509)
+                res = rsaKey.pemEncoded(format: .X509)
+            } catch {
+                #if DEBUG
+                print(error)
+                #endif
+            }
+            return res
+        }
+    }
     
     public init(version: UInt8, platform: WDVDevicePlatform, securityLvl: WDVSecurityLevel, flags: UInt8, key: [UInt8], clID: WDVClientIdentification, vmp: WDVFileHashes) {
         self.version = version
@@ -38,6 +55,40 @@ public class WDVDevice {
         self.vmp = vmp
     }
     
+    ///Serializes device info as wvd file bytes
+    public func serialize() -> [UInt8] {
+        var wdvBytes = [UInt8].init(WDVDevice.magic)
+        wdvBytes.append(version)
+        wdvBytes.append(platform.rawValue)
+        wdvBytes.append(securityLvl.rawValue)
+        wdvBytes.append(flags)
+        wdvBytes.append(contentsOf: WDVBinaryUtil.getBytes(UInt16(key.count)))
+        wdvBytes.append(contentsOf: key)
+        var data = Data()
+        do {
+            data = try clID.serializedData()
+        } catch {
+            #if DEBUG
+            print(error)
+            #endif
+        }
+        wdvBytes.append(contentsOf: WDVBinaryUtil.getBytes(UInt16(data.count)))
+        wdvBytes.append(contentsOf: data)
+        if (version == 1) {
+            data = Data()
+            do {
+                data = try vmp.serializedData()
+            } catch {
+                #if DEBUG
+                print(error)
+                #endif
+            }
+            wdvBytes.append(contentsOf: WDVBinaryUtil.getBytes(UInt16(data.count)))
+            wdvBytes.append(contentsOf: data)
+        }
+        return wdvBytes
+    }
+    
     public static func from(b64WdvDeviceData: String) -> WDVDevice? {
         guard let safeWdvData = Data(base64Encoded: b64WdvDeviceData) else {
             #if DEBUG
@@ -46,6 +97,38 @@ public class WDVDevice {
             return nil
         }
         return from(wdvBytes: [UInt8].init(safeWdvData))
+    }
+    
+    public static func from(devicePemPrivateKey: String, deviceClientIDBlob: Data, platform: WDVDevicePlatform, securityLevel: WDVSecurityLevel, deviceInfoVersion: UInt8 = 2, flags: UInt8 = 0) -> WDVDevice? {
+        let rsaKey: RSAPrivateKey
+        do {
+            rsaKey = try RSAPrivateKey(pem: devicePemPrivateKey, format: .X509)
+        } catch {
+            #if DEBUG
+            print(error)
+            #endif
+            return nil
+        }
+        let clID: WDVClientIdentification
+        do {
+            clID = try WDVClientIdentification(serializedBytes: deviceClientIDBlob)
+        } catch {
+            #if DEBUG
+            print(error)
+            #endif
+            return nil
+        }
+        var vmp = WDVFileHashes()
+        var safeVersion = deviceInfoVersion
+        do {
+            vmp = try WDVFileHashes(serializedBytes: clID.vmpData)
+            safeVersion = 2
+        } catch {
+            #if DEBUG
+            print(error)
+            #endif
+        }
+        return WDVDevice(version: safeVersion, platform: platform, securityLvl: securityLevel, flags: flags, key: rsaKey.derEncoded(format: .X509), clID: clID, vmp: vmp)
     }
     
     public static func from(wdvBytes: [UInt8]) -> WDVDevice? {

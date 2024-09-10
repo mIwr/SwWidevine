@@ -17,6 +17,7 @@
 		8B1CDFFD2C6E914A00D10D3F /* WDVSessionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1CDFFC2C6E914A00D10D3F /* WDVSessionUtil.swift */; };
 		8B1F2EA42C4991C10002720C /* WDVBinaryIntegerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F2EA32C4991C10002720C /* WDVBinaryIntegerExt.swift */; };
 		8B372A872C6B907B00C58133 /* appCrt.protobuf in Resources */ = {isa = PBXBuildFile; fileRef = 8B372A862C6B907B00C58133 /* appCrt.protobuf */; };
+		8B3A9EE52C90D185002C734F /* deviceClID.protobuf in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A9EE42C90D185002C734F /* deviceClID.protobuf */; };
 		8B3B1B492C6610240019070D /* TestConstantsXCodeEnvExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B1B482C6610200019070D /* TestConstantsXCodeEnvExt.swift */; };
 		8B3B1B4C2C66104C0019070D /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B1B4A2C66102D0019070D /* TestConstants.swift */; };
 		8B3B1B4F2C6610B40019070D /* UnitWDVBase16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B1B4E2C6610B40019070D /* UnitWDVBase16.swift */; };
@@ -64,6 +65,7 @@
 		8B1CE0022C6E9D8E00D10D3F /* SwWidevine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwWidevine.h; sourceTree = "<group>"; };
 		8B1F2EA32C4991C10002720C /* WDVBinaryIntegerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDVBinaryIntegerExt.swift; sourceTree = "<group>"; };
 		8B372A862C6B907B00C58133 /* appCrt.protobuf */ = {isa = PBXFileReference; lastKnownFileType = file; path = appCrt.protobuf; sourceTree = "<group>"; };
+		8B3A9EE42C90D185002C734F /* deviceClID.protobuf */ = {isa = PBXFileReference; lastKnownFileType = file; path = deviceClID.protobuf; sourceTree = "<group>"; };
 		8B3B1B472C6610200019070D /* TestConstantsSpmEnvExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstantsSpmEnvExt.swift; sourceTree = "<group>"; };
 		8B3B1B482C6610200019070D /* TestConstantsXCodeEnvExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstantsXCodeEnvExt.swift; sourceTree = "<group>"; };
 		8B3B1B4A2C66102D0019070D /* TestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				8B3B1B472C6610200019070D /* TestConstantsSpmEnvExt.swift */,
 				8B3B1B482C6610200019070D /* TestConstantsXCodeEnvExt.swift */,
 				8B372A862C6B907B00C58133 /* appCrt.protobuf */,
+				8B3A9EE42C90D185002C734F /* deviceClID.protobuf */,
 				8B541F502C6A5168005019B8 /* licRequest.protobuf */,
 				8B541F522C6A516E005019B8 /* licResponse.protobuf */,
 				8BE482FC2C6FDB28006C7C5C /* licReqSelfGenerated.protobuf */,
@@ -399,6 +402,7 @@
 				8B541F532C6A516E005019B8 /* licResponse.protobuf in Resources */,
 				8B541F512C6A5168005019B8 /* licRequest.protobuf in Resources */,
 				8BE482FF2C6FDB34006C7C5C /* licRespBySelfGenerated.protobuf in Resources */,
+				8B3A9EE52C90D185002C734F /* deviceClID.protobuf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,7 +584,7 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -599,7 +603,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.wdv;
@@ -624,7 +628,7 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -643,7 +647,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.wdv;
@@ -753,7 +757,7 @@
 			repositoryURL = "https://github.com/mIwr/SwPSSH";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
+				minimumVersion = 1.2.0;
 			};
 		};
 		8B489EFC2C0F66FA009BEEF4 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
