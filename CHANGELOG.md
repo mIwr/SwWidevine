@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.1
+**21.11.2024**
+
+**Other changes**
+
+- Bump project SPM dependencies
+- Non-Apple platforms build support fixes
+
 ## 1.1.0
 **10.09.2024**
 
