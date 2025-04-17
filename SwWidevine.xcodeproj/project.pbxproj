@@ -37,7 +37,6 @@
 		8BE482FD2C6FDB29006C7C5C /* licReqSelfGenerated.protobuf in Resources */ = {isa = PBXBuildFile; fileRef = 8BE482FC2C6FDB28006C7C5C /* licReqSelfGenerated.protobuf */; };
 		8BE482FF2C6FDB34006C7C5C /* licRespBySelfGenerated.protobuf in Resources */ = {isa = PBXBuildFile; fileRef = 8BE482FE2C6FDB34006C7C5C /* licRespBySelfGenerated.protobuf */; };
 		8BE601032C3C3C52007ADCE8 /* License.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE601022C3C3C52007ADCE8 /* License.pb.swift */; };
-		8BE601062C3C3FAC007ADCE8 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE601052C3C3FAC007ADCE8 /* CryptoSwift */; };
 		8BE601082C3C4145007ADCE8 /* WDVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE601072C3C4145007ADCE8 /* WDVError.swift */; };
 		8BFE63A82C7862B400DF770C /* WDVCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE63A72C7862B400DF770C /* WDVCMAC.swift */; };
 /* End PBXBuildFile section */
@@ -101,7 +100,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B489EFE2C0F66FA009BEEF4 /* SwiftProtobuf in Frameworks */,
-				8BE601062C3C3FAC007ADCE8 /* CryptoSwift in Frameworks */,
 				8B1C68342C67D69C00F241ED /* SwPSSH in Frameworks */,
 				8B150F722C7C9C41001FED2B /* SwiftRSA in Frameworks */,
 			);
@@ -314,7 +312,6 @@
 			name = SwWidevine;
 			packageProductDependencies = (
 				8B489EFD2C0F66FA009BEEF4 /* SwiftProtobuf */,
-				8BE601052C3C3FAC007ADCE8 /* CryptoSwift */,
 				8B1C68332C67D69C00F241ED /* SwPSSH */,
 				8B150F712C7C9C41001FED2B /* SwiftRSA */,
 			);
@@ -348,7 +345,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					8B489EDB2C0F64F2009BEEF4 = {
 						CreatedOnToolsVersion = 15.2;
@@ -370,7 +367,6 @@
 			mainGroup = 8B489ED22C0F64F2009BEEF4;
 			packageReferences = (
 				8B489EFC2C0F66FA009BEEF4 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
-				8BE601042C3C3FAC007ADCE8 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 				8B1C68322C67D69C00F241ED /* XCRemoteSwiftPackageReference "SwPSSH" */,
 				8B150F702C7C9C41001FED2B /* XCRemoteSwiftPackageReference "SwiftRSA" */,
 			);
@@ -489,6 +485,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -555,6 +552,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -584,7 +582,8 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -602,8 +601,8 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.6;
-				MARKETING_VERSION = 1.1.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.1.2;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.wdv;
@@ -619,6 +618,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 				TVOS_DEPLOYMENT_TARGET = 11.0;
 				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
@@ -628,7 +628,8 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -646,8 +647,8 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.6;
-				MARKETING_VERSION = 1.1.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.1.2;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.wdv;
@@ -662,15 +663,16 @@
 				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 				TVOS_DEPLOYMENT_TARGET = 11.0;
 				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;
 		};
 		8B489EF22C0F64F2009BEEF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = "";
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
@@ -691,9 +693,9 @@
 		8B489EF32C0F64F2009BEEF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = "";
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
@@ -749,7 +751,7 @@
 			repositoryURL = "https://github.com/mIwr/SwiftRSA";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.5.2;
+				minimumVersion = 2.6.1;
 			};
 		};
 		8B1C68322C67D69C00F241ED /* XCRemoteSwiftPackageReference "SwPSSH" */ = {
@@ -757,7 +759,7 @@
 			repositoryURL = "https://github.com/mIwr/SwPSSH";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.1;
+				minimumVersion = 1.2.2;
 			};
 		};
 		8B489EFC2C0F66FA009BEEF4 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
@@ -765,15 +767,7 @@
 			repositoryURL = "https://github.com/apple/swift-protobuf.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.27.1;
-			};
-		};
-		8BE601042C3C3FAC007ADCE8 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.8.2;
+				minimumVersion = 1.29.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -793,11 +787,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8B489EFC2C0F66FA009BEEF4 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
 			productName = SwiftProtobuf;
-		};
-		8BE601052C3C3FAC007ADCE8 /* CryptoSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8BE601042C3C3FAC007ADCE8 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
-			productName = CryptoSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

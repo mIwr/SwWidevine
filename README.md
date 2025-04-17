@@ -70,7 +70,7 @@ macOS 10.13+, iOS 11.0+ and Windows are supported by the module code base. Other
 SwWidevine is available with SPM
 
 ```
-.package(url: "https://github.com/mIwr/SwWidevine.git", .from(from: "1.1.1"))
+.package(url: "https://github.com/mIwr/SwWidevine.git", .from(from: "1.1.2"))
 ```
 
 ### CocoaPods

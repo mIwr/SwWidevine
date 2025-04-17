@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.2
+**17.04.2025**
+
+- Exclude *CryptoSwift* package from SPM for Apple devices
+- Bump SPM dependencies
+
 ## 1.1.1
 **21.11.2024**
 
